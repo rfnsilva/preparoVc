@@ -1,0 +1,47 @@
+version: '3'
+services:
+  mongo:
+    image: mongo
+    container_name: mongo
+    restart: unless-stopped
+    networks:
+      - teste
+      
+  backend:
+    build:
+      context: ./api
+    container_name: backend
+    restart: always
+    depends_on:
+      - mongo
+    ports:
+      - "3333:3333"
+    volumes: 
+      - ./api:/api
+    restart: unless-stopped
+    environment:
+      - MONGO_HOSTNAME=mongo
+    command: sh -c "/wait && yarn db:migrate && yarn dev:docker"
+    networks:
+      - teste
+                
+  frontend:
+    build:
+      context: ./client
+    container_name: frontend
+    restart: always
+    depends_on: 
+      - mongo
+      - backend
+    stdin_open: true
+    ports:
+      - "3000:3000"
+    volumes: 
+      - ./client:/client
+    networks:
+      - teste
+                
+                
+networks:
+  teste:
+    driver: bridge
