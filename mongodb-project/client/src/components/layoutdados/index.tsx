@@ -80,7 +80,7 @@ const layoutdados: React.FC<Props> = ({ isOpenSidebar }) => {
       const schema = Yup.object().shape({
         name: Yup.string().min(4).required('nome é obrigatorio !'),
         surname: Yup.string().min(4).required('sobrenome é obrigatorio !'),
-        phone: Yup.string().min(8).required('telefone é obrigatorio !')
+        phone: Yup.number().min(8).required('telefone é obrigatorio !')
       })
 
       await schema.validate(data, {
