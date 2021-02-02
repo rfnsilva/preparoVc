@@ -28,12 +28,11 @@
   - Eslint
 
 ## Estrutura do projeto
-- ./
-  - firebase-project-client
-  - mongodb-project
-    - api
-    - client
-    - docker-compose.yml
+- firebase-project-client
+- mongodb-project
+  - api
+  - client
+  - docker-compose.yml
 
 <br />
   
@@ -49,12 +48,12 @@
 
 ## Projeto mongodb + node + storage + react
 
-### Api - http://<span></span>localhost:3333  ( rode o comando dentro da pasta mongodb-project/api )
+### Api - http://<span></span>localhost:3333  ( rode o comando dentro da pasta mongodb-project / api )
 `yarn ou yarn install` - para instalar as dependências
 
 `yarn dev` - para executar
 
-### Web - http://<span></span>localhost:3000  ( rode o comando dentro da pasta mongodb-project/client )
+### Web - http://<span></span>localhost:3000  ( rode o comando dentro da pasta mongodb-project / client )
 `yarn ou yarn install` - para instalar as dependências
 
 `yarn start` - para executar
@@ -96,8 +95,8 @@ Resposta: 200
   "data": {
     "user": {
       "id": 1,
-      "name": "admin",
-      "email": "admin@admin.com"
+      "email": "admin@admin.com",
+      ...rest
     },
     "token": {
       "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjAwMzUyMzc2LCJleHAiOjE2MDA1MjUxNzZ9.wioT2DD5EEP_qMHcw7oEjWCFW3rSpAeg1e6YHDHiEfQ"
@@ -126,8 +125,8 @@ Resposta: 201
   "status": "201",
   "data": {
     "id": 1,
-    "name": "admin",
     "email": "admin@admin.com",
+    ...rest
   }
 }
 ```
@@ -149,7 +148,6 @@ Resposta: 200
   "status": "200",
   "data": {
     "id": 1,
-    "name": "admin",
     "email": "admin@admin.com",
     ...rest
   }
@@ -170,7 +168,8 @@ body (dados para atualização)
 {
   "id": 1,
   "name": "admin",
-  "email": "admin@admin.com"
+  "email": "admin@admin.com",
+  ...rest
 }
 ```
 
@@ -180,8 +179,8 @@ Resposta: 200
   "status": "200",
   "data": {
     "id": 1,
-    "name": "admin_atualizado",
-    "email": "admin_atualizado@admin_atualizado.com"
+    "email": "emailatualizadoo@atualizado.com",
+    ...rest
   }
 }
 ```
