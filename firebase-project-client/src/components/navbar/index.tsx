@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from 'react'
+import React, { useState, useContext } from 'react'
 import { useHistory } from 'react-router-dom'
 import { FaBars } from 'react-icons/fa'
 
@@ -15,20 +15,7 @@ const navbar: React.FC<Props> = ({ toggleSidebar }) => {
   const history = useHistory()
   const [scrollNav, setScrollNav] = useState<boolean>(false)
   const [isOpen, setIsOpen] = useState<boolean>(false)
-  const [isOpenJWT, setIsOpenJWT] = useState<boolean>(false)
   const { signOut, user } = useContext(AuthContext)
-
-  useEffect(() => {
-    window.addEventListener('scroll', changeScrollNav)
-  }, [])
-
-  const changeScrollNav = () => {
-    if (window.scrollY >= 80) {
-      setScrollNav(true)
-    } else {
-      setScrollNav(false)
-    }
-  }
 
   const toggle = () => {
     setIsOpen(!isOpen)
@@ -56,7 +43,7 @@ const navbar: React.FC<Props> = ({ toggleSidebar }) => {
             <FaBars />
           </MobileIcon>
 
-          <NavMenu isOpenJWT={isOpenJWT}>
+          <NavMenu>
             <li className="nav-item dropdown no-arrow mx-1">
               <a
                 className="nav-link dropdown-toggle"
