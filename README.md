@@ -36,20 +36,12 @@
     - docker-compose.yml
   
 ## Rodar localmente 
-( Obs: para logar usar o email: admin<span></span>@admin.com; senha: 123456 )
 
 <br />
 
-### API - http://<span></span>localhost:3333 ( rode o comando dentro da pasta api )
-`yarn ou yarn install` - para instalar as dependências
+##Projeto firebase + storage + react
 
-`
-yarn dev
-`
-
-<br />
-
-### Web - http://<span></span>localhost:3000  ( rode o comando dentro da pasta client )
+### API - http://<span></span>localhost:3000 ( rode o comando dentro da pasta firebase-project-client )
 `yarn ou yarn install` - para instalar as dependências
 
 `
@@ -58,14 +50,32 @@ yarn start
 
 <br />
 
-## Rodar api e web usando docker com um único comando ( rode o comando na raiz )
+##Projeto mongodb + node + storage + react
+
+### Api - http://<span></span>localhost:3333  ( rode o comando dentro da pasta mongodb-project/api )
+`yarn ou yarn install` - para instalar as dependências
+
+`
+yarn dev
+`
+
+### Web - http://<span></span>localhost:3000  ( rode o comando dentro da pasta mongodb-project/client )
+`yarn ou yarn install` - para instalar as dependências
+
+`
+yarn start
+`
+
+<br />
+
+## Rodar api e web usando docker com um único comando ( rode o comando na pasta mongodb-project )
 `
 docker-compose up
 `
 
 <br />
 
-## executar teste na api ( rode o comando dentro da pasta api )
+## executar teste na api ( rode o comando dentro da pasta mongodb-project/api )
 `
 yarn test
 `
@@ -98,9 +108,7 @@ Resposta: 200
     "user": {
       "id": 1,
       "name": "admin",
-      "email": "admin@admin.com",
-      "phone": "11912321312",
-      "cpf": "49985017161"
+      "email": "admin@admin.com"
     },
     "token": {
       "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjAwMzUyMzc2LCJleHAiOjE2MDA1MjUxNzZ9.wioT2DD5EEP_qMHcw7oEjWCFW3rSpAeg1e6YHDHiEfQ"
@@ -109,7 +117,7 @@ Resposta: 200
 }
 ```
 
-### Criar um novo usuário
+### Registrar um novo usuário
 
 Rota:
 `/createUser
@@ -118,10 +126,7 @@ Rota:
 Modelo de requisição:
 ```json
 {
-  "name": "admin",
   "email": "admin@admin.com",
-  "phone": "11912321312",
-  "cpf": "4999999999",
   "password": "123456"
 }
 ```
@@ -134,8 +139,6 @@ Resposta: 201
     "id": 1,
     "name": "admin",
     "email": "admin@admin.com",
-    "phone": "11912321312",
-    "cpf": "4999999999"
   }
 }
 ```
@@ -159,8 +162,7 @@ Resposta: 200
     "id": 1,
     "name": "admin",
     "email": "admin@admin.com",
-    "phone": "11912321312",
-    "cpf": "4999999999"
+    ...rest
   }
 }
 ```
@@ -179,9 +181,7 @@ body (dados para atualização)
 {
   "id": 1,
   "name": "admin",
-  "email": "admin@admin.com",
-  "phone": "11912321312",
-  "cpf": "4999999999"
+  "email": "admin@admin.com"
 }
 ```
 
@@ -192,30 +192,7 @@ Resposta: 200
   "data": {
     "id": 1,
     "name": "admin_atualizado",
-    "email": "admin_atualizado@admin_atualizado.com",
-    "phone": "11912321312",
-    "cpf": "4999999999"
-  }
-}
-```
-
-### deletar um usuário pelo id (deleta o usuario e retorna a lista de usuarios atualizada)
-
-Rota:
-`/deleteUser/:id
-`
-
-Modelo de requisição:
-```
-url = http://localhost:3333/deleteUser/1
-```
-
-Resposta: 200
-```json
-{
-  "status": "200",
-  "data": {
-    lista de usuarios atualizada
+    "email": "admin_atualizado@admin_atualizado.com"
   }
 }
 ```
