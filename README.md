@@ -39,7 +39,7 @@
 
 <br />
 
-##Projeto firebase + storage + react
+## Projeto firebase + storage + react
 
 ### API - http://<span></span>localhost:3000 ( rode o comando dentro da pasta firebase-project-client )
 `yarn ou yarn install` - para instalar as dependências
@@ -50,7 +50,7 @@ yarn start
 
 <br />
 
-##Projeto mongodb + node + storage + react
+## Projeto mongodb + node + storage + react
 
 ### Api - http://<span></span>localhost:3333  ( rode o comando dentro da pasta mongodb-project/api )
 `yarn ou yarn install` - para instalar as dependências
