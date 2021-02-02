@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 
 import { Container } from './styles'
 
@@ -7,29 +7,8 @@ interface Props {
 }
 
 const layouthome: React.FC<Props> = ({ isOpenSidebar }) => {
-  const [widthSidebarOpen, setWidthSidebarOpen] = useState<boolean>(false)
-
-  useEffect(() => {
-    window.addEventListener('resize', changeWidthSidebar)
-
-    if (window.innerWidth >= 768) {
-      setWidthSidebarOpen(true)
-    }
-  }, [])
-
-  const changeWidthSidebar = () => {
-    if (window.innerWidth >= 768) {
-      setWidthSidebarOpen(true)
-    } else {
-      setWidthSidebarOpen(false)
-    }
-  }
-
   return (
-    <Container
-      isOpenSidebar={isOpenSidebar}
-      widthSidebarOpen={widthSidebarOpen}
-    >
+    <Container isOpenSidebar={isOpenSidebar}>
       <div className="container-fluid px-1 px-md-4 py-5 mx-auto">
         <div
           className="row d-flex justify-content-center px-3"

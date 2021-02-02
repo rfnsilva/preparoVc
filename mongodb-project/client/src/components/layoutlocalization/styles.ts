@@ -2,12 +2,9 @@ import styled from 'styled-components'
 
 interface Props {
   isOpenSidebar: boolean
-  widthSidebarOpen: boolean
 }
 
 export const Container = styled.div<Props>`
-  margin-left: ${props =>
-    props.isOpenSidebar || props.widthSidebarOpen ? '85px;' : '0;'};
   width: 100%;
 
   .card {

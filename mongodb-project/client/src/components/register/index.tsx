@@ -48,7 +48,7 @@ const register: React.FC = () => {
         // redirecionar
         return history.push('/')
       } else {
-        alert('email e/ou senha incorretos')
+        alert('erro ao cadastrar')
       }
     } catch (err) {
       const validationErrors: IErrors = {}
@@ -93,12 +93,6 @@ const register: React.FC = () => {
                     </div>
 
                     <div className="css-img-button">
-                      <div className="col-6 justify-content-right">
-                        <img
-                          className="img-fluid"
-                          src="https://img.icons8.com/plasticine/100/000000/sun.png"
-                        />
-                      </div>
                       <div>
                         <button type="submit" className="register-btn">
                           Registrar

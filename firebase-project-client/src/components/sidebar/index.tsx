@@ -17,7 +17,7 @@ const sidebar: React.FC<Props> = ({ isOpenSidebar }) => {
   }
 
   return (
-    <Container isOpenSidebar={isOpenSidebar} style={{ position: 'fixed' }}>
+    <Container isOpenSidebar={isOpenSidebar}>
       <ul
         className="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion toggled"
         id="accordionSidebar"

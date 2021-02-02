@@ -5,7 +5,7 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #c93b59;
+  background-color: #e9ecef;
   color: rgb(105, 104, 104);
   font-family: sans-serif;
 
@@ -21,12 +21,6 @@ export const Container = styled.div`
     box-shadow: 5px 8px 10px #80808033;
   }
 
-  .carousel {
-    h2 {
-      text-align: center;
-    }
-  }
-
   @media (max-width: 767px) {
     .card {
       padding: 1.5rem 1.5rem 1rem 1.5rem;
@@ -34,17 +28,13 @@ export const Container = styled.div`
   }
 
   .card-1 {
-    background: linear-gradient(
-      to right,
-      #ffffff 50%,
-      rgba(241, 224, 190, 0.507)
-    );
+    background: #fff;
   }
 
-  .img-fluid {
-    display: flex;
-    align-items: center;
-    -webkit-user-drag: none;
+  .carousel {
+    h2 {
+      text-align: center;
+    }
   }
 
   @media (max-width: 400px) {
@@ -76,7 +66,11 @@ export const Container = styled.div`
     margin-top: 38px;
     justify-content: space-between;
     align-items: center;
-    width: 97%;
+    width: 100%;
+
+    div {
+      width: 100%;
+    }
   }
 
   .error {

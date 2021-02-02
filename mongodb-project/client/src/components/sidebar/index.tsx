@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import { useHistory } from 'react-router-dom'
 import { FaHome, FaMapMarkerAlt, FaFileAlt } from 'react-icons/fa'
 
@@ -17,7 +17,7 @@ const sidebar: React.FC<Props> = ({ isOpenSidebar }) => {
   }
 
   return (
-    <Container isOpenSidebar={isOpenSidebar} style={{ position: 'fixed' }}>
+    <Container isOpenSidebar={isOpenSidebar}>
       <ul
         className="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion toggled"
         id="accordionSidebar"

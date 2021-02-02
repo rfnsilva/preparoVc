@@ -1,4 +1,4 @@
-import React, { useContext, useState, useRef, useEffect } from 'react'
+import React, { useContext, useRef } from 'react'
 import { Form } from '@unform/web'
 import { SubmitHandler, FormHandles } from '@unform/core'
 import * as Yup from 'yup'
@@ -29,23 +29,6 @@ interface IErrors {
 const layoutdados: React.FC<IProps> = ({ isOpenSidebar }) => {
   const { user, updateEmail, updateUser, uploadImage } = useContext(AuthContext)
   const formRef = useRef<FormHandles>(null)
-  const [widthSidebarOpen, setWidthSidebarOpen] = useState<boolean>(false)
-
-  useEffect(() => {
-    window.addEventListener('resize', changeWidthSidebar)
-
-    if (window.innerWidth >= 768) {
-      setWidthSidebarOpen(true)
-    }
-  }, [])
-
-  const changeWidthSidebar = () => {
-    if (window.innerWidth >= 768) {
-      setWidthSidebarOpen(true)
-    } else {
-      setWidthSidebarOpen(false)
-    }
-  }
 
   const submitEmailUpdate: SubmitHandler<string> = async data => {
     try {
@@ -124,10 +107,7 @@ const layoutdados: React.FC<IProps> = ({ isOpenSidebar }) => {
   }
 
   return (
-    <Container
-      isOpenSidebar={isOpenSidebar}
-      widthSidebarOpen={widthSidebarOpen}
-    >
+    <Container isOpenSidebar={isOpenSidebar}>
       <div className="container-fluid px-1 px-md-4 py-5 mx-auto">
         <div
           className="row d-flex justify-content-center px-3"
