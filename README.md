@@ -185,33 +185,4 @@ Resposta: 200
 }
 ```
 
-## Telas
-
-### Login
-![tela_login](https://i.ibb.co/BcZmTrv/Captura-de-tela-de-2021-01-12-22-32-39.png)
-
-### Login Mobile
-![tela_login_mobile](https://i.ibb.co/3sb8w6P/Captura-de-tela-de-2021-01-12-22-33-13.png)
-
-### Home
-![tela_home](https://i.ibb.co/qj2V0bC/Captura-de-tela-de-2021-01-12-23-43-02.png)
-
-### Home Mobile
-![tela_home_mobile](https://i.ibb.co/p2vjbxD/Captura-de-tela-de-2021-01-12-23-43-45.png)
-
-## Ações
-
-### Logar
-
-![logar_process](https://i.ibb.co/3S4jGTC/ezgif-com-video-to-gif.gif)
-
-### Cadastrar usuário
-
-![cadatro_process](https://i.ibb.co/sVdp3CL/ezgif-com-video-to-gif-1.gif)
-
-### Atualizar usuário
-
-![atualizar_process](https://i.ibb.co/6tJFw66/ezgif-com-video-to-gif-2.gif)
-
-
 Ricardo Neves, 12 de janeiro de 2021.
