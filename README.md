@@ -16,17 +16,17 @@
 
 ### Frontend:
  - React.js
-  - Axios
-  - History
-  - React-router-dom
-  - Styled-components
-  - yup
-  - firebase
-  - unform
-  - Context Api
-  - Bootstrap
-  - Docker
-  - Eslint
+   - Axios
+   - History
+   - React-router-dom
+   - Styled-components
+   - yup
+   - firebase
+   - unform
+   - Context Api
+   - Bootstrap
+   - Docker
+   - Eslint
 
 ## Estrutura do projeto
 - firebase-project-client
