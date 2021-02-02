@@ -47,8 +47,9 @@ const layoutdados: React.FC<IProps> = ({ isOpenSidebar }) => {
       })
 
       // Validation passed
-      if (user.id !== undefined && user.password) {
-        await updateEmailUser(email, user.password, user.id)
+      if (user.id !== undefined) {
+        console.log(email)
+        await updateEmailUser(email, user.id)
       }
     } catch (err) {
       const validationErrors: IErrors = {}

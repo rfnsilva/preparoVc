@@ -38,7 +38,7 @@ interface AuthContextData {
     email: string | undefined,
     password: string | undefined
   ): Promise<IUser | undefined>
-  updateEmailUser(email: string, password: string, id: string): Promise<void>
+  updateEmailUser(email: string, id: string): Promise<void>
   updateUser(user: IUser, id: string): Promise<void>
   signOut(): Promise<void>
   uploadImage(file: File, id: string): Promise<void>
@@ -134,14 +134,11 @@ export const AuthProvider: React.FC = ({ children }) => {
     localStorage.clear()
   }
 
-  async function updateEmailUser(email: string, password: string, id: string) {
-    // const userCurrent = auth.currentUser
-
-    // userCurrent?.updateEmail(email)
-
-    const { user } = await auth.signInWithEmailAndPassword(email, password)
-
-    user?.updateEmail(email)
+  async function updateEmailUser(email: string, id: string) {
+    const userCurrent = auth.currentUser
+    if (userCurrent) {
+      await userCurrent.updateEmail(email)
+    }
 
     await db.collection('user').doc(id).update({
       email: email
