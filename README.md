@@ -11,7 +11,6 @@
   - Jest
   - Jsonwebtoken
   - Bcrypt
-  - firebase
   - Docker
   - Eslint
 
@@ -22,6 +21,7 @@
   - React-router-dom
   - Styled-components
   - yup
+  - firebase
   - unform
   - Context Api
   - Bootstrap
@@ -37,10 +37,12 @@
 
 <br />
   
-## Rodar localmente 
+## Como rodar 
 ## Projeto firebase + storage + react
 
-### Web - http://<span></span>localhost:3000 ( rode o comando dentro da pasta firebase-project-client )
+### Web - http://<span></span>localhost:3000
+- Obs: execute o comando dentro da pasta firebase-project-client
+
 `yarn ou yarn install` - para instalar as dependências
 
 `yarn start` - para executar
@@ -49,19 +51,24 @@
 
 ## Projeto mongodb + node + storage + react
 
-### Api - http://<span></span>localhost:3333  ( rode o comando dentro da pasta mongodb-project / api )
+### Api - http://<span></span>localhost:3333
+- Obs: execute o comando dentro da pasta mongodb-project / api 
+
 `yarn ou yarn install` - para instalar as dependências
 
 `yarn dev` - para executar
 
-### Web - http://<span></span>localhost:3000  ( rode o comando dentro da pasta mongodb-project / client )
+### Web - http://<span></span>localhost:3000
+- Obs: execute o comando dentro da pasta mongodb-project / client
+
 `yarn ou yarn install` - para instalar as dependências
 
 `yarn start` - para executar
 
 <br />
 
-## Rodar api e web usando docker com um único comando ( rode o comando na pasta mongodb-project )
+## Rodar api e web usando docker com um único comando
+- Obs: execute o comando na pasta mongodb-project
 `
 docker-compose up
 `
