@@ -34,11 +34,10 @@
     - api
     - client
     - docker-compose.yml
-  
-## Rodar localmente 
 
 <br />
-
+  
+## Rodar localmente 
 ## Projeto firebase + storage + react
 
 ### Web - http://<span></span>localhost:3000 ( rode o comando dentro da pasta firebase-project-client )
@@ -73,10 +72,6 @@ docker-compose up
 `
 yarn test
 `
-<br />
-<br />
-![teste_process](https://i.ibb.co/rm75sCX/ezgif-com-video-to-gif-1.gif)
-
 <br />
 
 ## API rotas
