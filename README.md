@@ -1,4 +1,4 @@
-# Desafio Full Stack
+# Desafio Full Stack [estágio]
 
 ## Tecnologias utilizados
 
@@ -20,6 +20,8 @@
   - History
   - React-router-dom
   - Styled-components
+  - yup
+  - unform
   - Context Api
   - Bootstrap
   - Docker
@@ -27,9 +29,11 @@
 
 ## Estrutura do projeto
 - ./
-  - api
-  - client
-  - docker-compose.yml
+  - firebase-project-client
+  - mongodb-project
+    - api
+    - client
+    - docker-compose.yml
   
 ## Rodar localmente 
 ( Obs: para logar usar o email: admin<span></span>@admin.com; senha: 123456 )
