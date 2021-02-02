@@ -69,19 +69,45 @@
 
 ## Rodar api e web usando docker com um único comando
 - Obs: execute o comando na pasta mongodb-project
-`
-docker-compose up
-`
+
+`docker-compose up`
 
 <br />
 
-## executar teste na api ( rode o comando dentro da pasta mongodb-project/api )
-`
-yarn test
-`
+## executar teste na api
+- Obs: execute o comando dentro da pasta mongodb-project / api
+
+`yarn test`
+
 <br />
 
 ## API rotas
+
+### Registrar um novo usuário
+
+Rota:
+`/createUser
+`
+
+Modelo de requisição:
+```json
+{
+  "email": "admin@admin.com",
+  "password": "123456"
+}
+```
+
+Resposta: 201
+```json
+{
+  "status": "201",
+  "data": {
+    "id": 1,
+    "email": "admin@admin.com",
+    ...rest
+  }
+}
+```
 
 ### Criar sessão
 
@@ -109,32 +135,6 @@ Resposta: 200
     "token": {
       "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjAwMzUyMzc2LCJleHAiOjE2MDA1MjUxNzZ9.wioT2DD5EEP_qMHcw7oEjWCFW3rSpAeg1e6YHDHiEfQ"
     }
-  }
-}
-```
-
-### Registrar um novo usuário
-
-Rota:
-`/createUser
-`
-
-Modelo de requisição:
-```json
-{
-  "email": "admin@admin.com",
-  "password": "123456"
-}
-```
-
-Resposta: 201
-```json
-{
-  "status": "201",
-  "data": {
-    "id": 1,
-    "email": "admin@admin.com",
-    ...rest
   }
 }
 ```
