@@ -11,6 +11,7 @@
   - Jest
   - Jsonwebtoken
   - Bcrypt
+  - firebase
   - Docker
   - Eslint
 
