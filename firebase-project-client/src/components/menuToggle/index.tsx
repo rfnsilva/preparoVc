@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import { useHistory } from 'react-router-dom'
 
-import AuthContext from '../../contexts/auth'
+import AuthContext from '../../contexts/appContext'
 
 import { Container, Icon, CloseIcon, Wrapper, Menu, MenuLink } from './styles'
 

@@ -3,7 +3,7 @@ import { Form } from '@unform/web'
 import { SubmitHandler, FormHandles } from '@unform/core'
 import * as Yup from 'yup'
 
-import AuthContext from '../../contexts/auth'
+import AuthContext from '../../contexts/appContext'
 
 import Input from '../input'
 
@@ -201,7 +201,7 @@ const layoutdados: React.FC<Props> = ({ isOpenSidebar }) => {
             </Form>
           </div>
 
-          <div>
+          <div className="cardData">
             <Form ref={formRef} onSubmit={submitUpdateUser}>
               <div className="card">
                 <div className="row">

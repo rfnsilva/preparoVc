@@ -3,7 +3,7 @@ import { Form } from '@unform/web'
 import { SubmitHandler, FormHandles } from '@unform/core'
 import * as Yup from 'yup'
 
-import AuthContext from '../../contexts/auth'
+import AuthContext from '../../contexts/appContext'
 
 import Input from '../input'
 
@@ -97,7 +97,7 @@ const layoutdados: React.FC<IProps> = ({ isOpenSidebar }) => {
       const schema = Yup.object().shape({
         name: Yup.string().min(4).required('nome é obrigatorio !'),
         surname: Yup.string().min(4).required('sobrenome é obrigatorio !'),
-        phone: Yup.string().min(8).required('telefone é obrigatorio !')
+        phone: Yup.number().min(8).required('telefone é obrigatorio !')
       })
 
       await schema.validate(data, {
@@ -141,7 +141,14 @@ const layoutdados: React.FC<IProps> = ({ isOpenSidebar }) => {
               </div>
               <div className="col-sm-12 col-lg-6 col-md-6 col-12">
                 <div className="mx-auto mb-3 text-left">
-                  <img className="profile-img" src={user.image} />
+                  <img
+                    className="profile-img"
+                    src={
+                      user.image === null || user.image === undefined
+                        ? 'https://via.placeholder.com/150'
+                        : user.image
+                    }
+                  />
                 </div>
                 <div>
                   <div className="input-upload">
@@ -192,7 +199,7 @@ const layoutdados: React.FC<IProps> = ({ isOpenSidebar }) => {
               </div>
             </Form>
           </div>
-          <div>
+          <div className="cardData">
             <Form ref={formRef} onSubmit={submitUpdateUser}>
               <div className="card">
                 <div className="row">

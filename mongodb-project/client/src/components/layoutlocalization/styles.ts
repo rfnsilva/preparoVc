@@ -12,11 +12,11 @@ export const Container = styled.div<Props>`
 
   .card {
     width: 100%;
-    max-width: 850px;
+    border-radius: 7px;
+    max-width: 1028px;
     height: 100%;
-    border-radius: 20px;
     box-shadow: 0px 8px 16px 4px #9e9e9e;
-    margin-top: 15px;
+    margin: 15px auto 0 auto;
     padding: 25px;
 
     label {
@@ -33,10 +33,6 @@ export const Container = styled.div<Props>`
   .row {
     height: 100%;
     align-items: center;
-
-    .titleSection {
-      text-align: center;
-    }
   }
 
   .btn-primary {
@@ -51,6 +47,10 @@ export const Container = styled.div<Props>`
       #ffffff 50%,
       rgba(241, 224, 190, 0.507)
     );
+  }
+
+  form {
+    width: 100%;
   }
 
   .sendButton {

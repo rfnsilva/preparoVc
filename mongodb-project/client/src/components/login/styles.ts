@@ -22,6 +22,12 @@ export const Container = styled.div`
     box-shadow: 5px 8px 10px #80808033;
   }
 
+  .carousel {
+    h2 {
+      text-align: center;
+    }
+  }
+
   @media (max-width: 767px) {
     .card {
       padding: 1.5rem 1.5rem 1rem 1.5rem;
@@ -115,6 +121,7 @@ export const Container = styled.div`
     a {
       background-color: #8e253b;
       cursor: pointer;
+      font-size: 25px;
     }
   }
 

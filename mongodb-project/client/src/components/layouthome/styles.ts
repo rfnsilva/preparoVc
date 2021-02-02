@@ -12,9 +12,9 @@ export const Container = styled.div<Props>`
 
   .card {
     width: 100%;
-    max-width: 850px;
+    border-radius: 7px;
+    max-width: 1034px;
     height: 100%;
-    border-radius: 20px;
     box-shadow: 0px 8px 16px 4px #9e9e9e;
     margin-top: 15px;
     padding: 25px;

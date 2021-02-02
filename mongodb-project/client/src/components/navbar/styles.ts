@@ -3,9 +3,6 @@ import styled from 'styled-components'
 interface Props {
   scrollNav: boolean
 }
-interface PropsJWT {
-  isOpenJWT: boolean
-}
 
 export const Container = styled.nav<Props>`
   background-color: #fff;
@@ -65,7 +62,7 @@ export const MobileIcon = styled.div`
   }
 `
 
-export const NavMenu = styled.ul<PropsJWT>`
+export const NavMenu = styled.ul`
   display: flex;
   align-items: center;
   list-style: none;
@@ -81,7 +78,7 @@ export const NavMenu = styled.ul<PropsJWT>`
   }
 
   .nav-link {
-    color: #d1d3e2;
+    color: #34383e;
     height: 4.375rem;
     display: flex;
     align-items: center;
@@ -104,32 +101,16 @@ export const NavMenu = styled.ul<PropsJWT>`
     }
   }
 
-  .dropdown-list {
-    padding: 0;
-    border: none;
-    overflow: hidden;
+  li {
+    img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+    }
   }
 
-  .shadow {
-    box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15) !important;
-  }
-
-  .jwt {
-    display: ${props => (props.isOpenJWT ? 'block' : 'none')};
-  }
-
-  .dropdown-header {
-    background-color: #296065;
-    border: 1px solid #1b3f42;
-    padding-top: 0.75rem;
-    padding-bottom: 0.75rem;
-  }
-
-  .dropdown-menu {
-    width: calc(100% - 1.5rem);
-    right: 0.75rem;
-    position: absolute;
-    font-size: 0.85rem;
+  .img-user {
+    margin-left: 40px !important;
   }
 
   .nav-link:after {
@@ -142,31 +123,6 @@ export const NavMenu = styled.ul<PropsJWT>`
     }
   }
 
-  @media (min-width: 576px) and (max-width: 769px) {
-    .dropdown-list {
-      margin-top: 38px;
-    }
-  }
-
-  @media (max-width: 576px) {
-    .jwt {
-      width: 87vw;
-      position: absolute;
-      font-size: 0.85rem;
-      float: none;
-    }
-
-    .dropdown-list {
-      padding: 0;
-      border: none;
-      overflow: hidden;
-      margin-top: 40px !important;
-    }
-    .dropdown-menu {
-      right: 0;
-    }
-  }
-
   @media (max-width: 768px) {
     .dropdown-toggle {
       display: none;
@@ -176,15 +132,6 @@ export const NavMenu = styled.ul<PropsJWT>`
   @media (min-width: 576px) {
     .dropdown {
       position: relative;
-    }
-
-    .dropdown-menu {
-      width: auto;
-      right: 0;
-    }
-
-    .dropdown-list {
-      width: 20rem !important;
     }
   }
 `

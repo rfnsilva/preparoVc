@@ -4,7 +4,7 @@ import { Form } from '@unform/web'
 import { SubmitHandler, FormHandles } from '@unform/core'
 import * as Yup from 'yup'
 
-import AuthContext from '../../contexts/auth'
+import AuthContext from '../../contexts/appContext'
 
 import Input from '../input'
 
@@ -73,9 +73,10 @@ const login: React.FC = () => {
     <Container>
       <div className="container">
         <div className="card card-1">
-          <div id="demo" className="carousel slide" data-ride="carousel">
-            <div className="carousel-inner">
-              <div className="carousel-item active">
+          <div id="demo" className="carousel" data-ride="carousel">
+            <h2>Login</h2>
+            <div>
+              <div>
                 <Form ref={formRef} onSubmit={handleSubmit}>
                   <div className="row">
                     <div className="form__group field">

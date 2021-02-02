@@ -104,6 +104,18 @@ export const NavMenu = styled.ul<PropsJWT>`
     }
   }
 
+  li {
+    img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+    }
+  }
+
+  .img-user {
+    margin-left: 40px !important;
+  }
+
   .dropdown-list {
     padding: 0;
     border: none;

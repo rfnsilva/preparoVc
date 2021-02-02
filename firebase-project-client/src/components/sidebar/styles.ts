@@ -2,7 +2,6 @@ import styled from 'styled-components'
 
 interface Props {
   isOpenSidebar: boolean
-  widthView: boolean
 }
 
 export const Container = styled.div<Props>`

@@ -16,9 +16,9 @@ export const Container = styled.div<Props>`
 
   .card {
     width: 100%;
-    max-width: 850px;
+    border-radius: 7px;
+    max-width: 1028px;
     height: 100%;
-    border-radius: 20px;
     box-shadow: 0px 8px 16px 4px #9e9e9e;
     margin-top: 15px;
     padding: 25px;
@@ -42,21 +42,11 @@ export const Container = styled.div<Props>`
       font-weight: 700;
       margin-left: 2px;
     }
+  }
 
-    .input {
-      display: block;
-      width: 100%;
-      height: 2.5rem;
-      padding: 0.375rem 0.75rem;
-      font-size: 1rem;
-      color: #495057;
-      background-color: #fff;
-      background-clip: padding-box;
-      border: 1px solid #ced4da;
-      border-radius: 0.25rem;
-      transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-      outline: 0;
-    }
+  .cardData {
+    width: 100%;
+    max-width: 1028px;
   }
 
   .row {

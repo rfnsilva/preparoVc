@@ -3,7 +3,7 @@ import { Form } from '@unform/web'
 import { SubmitHandler, FormHandles } from '@unform/core'
 import * as Yup from 'yup'
 
-import AuthContext from '../../contexts/auth'
+import AuthContext from '../../contexts/appContext'
 
 import Input from '../input'
 
@@ -96,8 +96,8 @@ const layoutlocalization: React.FC<Props> = ({ isOpenSidebar }) => {
           className="row d-flex justify-content-center px-3"
           style={{ margin: '0' }}
         >
-          <div className="card">
-            <Form ref={formRef} onSubmit={submitAddressUpdate}>
+          <Form ref={formRef} onSubmit={submitAddressUpdate}>
+            <div className="card">
               <div className="row">
                 <div className="col-sm-12 col-lg-6 col-md-6 col-12">
                   <h2 style={{ color: '#c93b59' }}>Instruções</h2>
@@ -218,12 +218,12 @@ const layoutlocalization: React.FC<Props> = ({ isOpenSidebar }) => {
                   </div>
                 </div>
               </div>
+            </div>
 
-              <div className="col-lg-12 p-3 d-flex justify-content-center sendButton">
-                <button type="submit">Enviar</button>
-              </div>
-            </Form>
-          </div>
+            <div className="col-lg-12 p-3 d-flex justify-content-center sendButton">
+              <button type="submit">Enviar</button>
+            </div>
+          </Form>
         </div>
       </div>
     </Container>

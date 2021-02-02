@@ -12,9 +12,9 @@ export const Container = styled.div<Props>`
 
   .card {
     width: 100%;
-    max-width: 850px;
+    border-radius: 7px;
+    max-width: 1028px;
     height: 100%;
-    border-radius: 20px;
     box-shadow: 0px 8px 16px 4px #9e9e9e;
     margin-top: 15px;
     padding: 25px;
@@ -38,6 +38,11 @@ export const Container = styled.div<Props>`
       font-weight: 700;
       margin-left: 2px;
     }
+  }
+
+  .cardData {
+    width: 100%;
+    max-width: 1028px;
   }
 
   .row {

@@ -10,19 +10,6 @@ interface Props {
 
 const sidebar: React.FC<Props> = ({ isOpenSidebar }) => {
   const history = useHistory()
-  const [widthView, setWidthView] = useState<boolean>(false)
-
-  useEffect(() => {
-    window.addEventListener('resize', changeScrollSidebar)
-  }, [])
-
-  const changeScrollSidebar = () => {
-    if (window.innerWidth >= 768) {
-      setWidthView(false)
-    } else {
-      setWidthView(true)
-    }
-  }
 
   const navigate = (url: string) => {
     // redirecionar
@@ -30,11 +17,7 @@ const sidebar: React.FC<Props> = ({ isOpenSidebar }) => {
   }
 
   return (
-    <Container
-      isOpenSidebar={isOpenSidebar}
-      widthView={widthView}
-      style={{ position: 'fixed' }}
-    >
+    <Container isOpenSidebar={isOpenSidebar} style={{ position: 'fixed' }}>
       <ul
         className="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion toggled"
         id="accordionSidebar"
