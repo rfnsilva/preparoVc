@@ -23,6 +23,7 @@ interface IUser {
   linkedin?: string
   behance?: string
   address?: IAddress
+  password?: string
 }
 
 interface AuthContextData {
@@ -37,7 +38,7 @@ interface AuthContextData {
     email: string | undefined,
     password: string | undefined
   ): Promise<IUser | undefined>
-  updateEmail(email: string, id: string): Promise<void>
+  updateEmailUser(email: string, password: string, id: string): Promise<void>
   updateUser(user: IUser, id: string): Promise<void>
   signOut(): Promise<void>
   uploadImage(file: File, id: string): Promise<void>
@@ -133,10 +134,14 @@ export const AuthProvider: React.FC = ({ children }) => {
     localStorage.clear()
   }
 
-  async function updateEmail(email: string, id: string) {
-    const userCurrent = auth.currentUser
+  async function updateEmailUser(email: string, password: string, id: string) {
+    // const userCurrent = auth.currentUser
 
-    userCurrent?.updateEmail(email)
+    // userCurrent?.updateEmail(email)
+
+    const { user } = await auth.signInWithEmailAndPassword(email, password)
+
+    user?.updateEmail(email)
 
     await db.collection('user').doc(id).update({
       email: email
@@ -233,7 +238,7 @@ export const AuthProvider: React.FC = ({ children }) => {
         signed: !!user,
         signUp,
         signIn,
-        updateEmail,
+        updateEmailUser,
         updateUser,
         updateLocalization,
         uploadImage,

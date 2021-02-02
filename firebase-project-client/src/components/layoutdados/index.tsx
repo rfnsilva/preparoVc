@@ -27,10 +27,12 @@ interface IErrors {
 }
 
 const layoutdados: React.FC<IProps> = ({ isOpenSidebar }) => {
-  const { user, updateEmail, updateUser, uploadImage } = useContext(AuthContext)
+  const { user, updateEmailUser, updateUser, uploadImage } = useContext(
+    AuthContext
+  )
   const formRef = useRef<FormHandles>(null)
 
-  const submitEmailUpdate: SubmitHandler<string> = async data => {
+  const submitEmailUpdate: SubmitHandler<string> = async email => {
     try {
       if (formRef.current) {
         formRef.current.setErrors({})
@@ -40,13 +42,13 @@ const layoutdados: React.FC<IProps> = ({ isOpenSidebar }) => {
         email: Yup.string().email().required('email é obrigatorio !')
       })
 
-      await schema.validate(data, {
+      await schema.validate(email, {
         abortEarly: false
       })
 
       // Validation passed
-      if (user.id !== undefined) {
-        await updateEmail(data, user.id)
+      if (user.id !== undefined && user.password) {
+        await updateEmailUser(email, user.password, user.id)
       }
     } catch (err) {
       const validationErrors: IErrors = {}
