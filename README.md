@@ -41,7 +41,7 @@
 
 ## Projeto firebase + storage + react
 
-### API - http://<span></span>localhost:3000 ( rode o comando dentro da pasta firebase-project-client )
+### Web - http://<span></span>localhost:3000 ( rode o comando dentro da pasta firebase-project-client )
 `yarn ou yarn install` - para instalar as dependências
 
 `yarn start` - para executar
