@@ -44,9 +44,7 @@
 ### API - http://<span></span>localhost:3000 ( rode o comando dentro da pasta firebase-project-client )
 `yarn ou yarn install` - para instalar as dependências
 
-`
-yarn start
-`
+`yarn start` - para executar
 
 <br />
 
@@ -55,16 +53,12 @@ yarn start
 ### Api - http://<span></span>localhost:3333  ( rode o comando dentro da pasta mongodb-project/api )
 `yarn ou yarn install` - para instalar as dependências
 
-`
-yarn dev
-`
+`yarn dev` - para executar
 
 ### Web - http://<span></span>localhost:3000  ( rode o comando dentro da pasta mongodb-project/client )
 `yarn ou yarn install` - para instalar as dependências
 
-`
-yarn start
-`
+`yarn start` - para executar
 
 <br />
 
