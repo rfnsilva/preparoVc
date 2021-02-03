@@ -78,7 +78,7 @@ export const NavMenu = styled.ul`
   }
 
   .nav-link {
-    color: #d1d3e2;
+    color: #34383e;
     height: 4.375rem;
     display: flex;
     align-items: center;
